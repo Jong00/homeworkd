@@ -1,0 +1,128 @@
+{% extends "main/base.html" %}
+
+{% block title %}zeroToAI 메인{% endblock %}
+{% block nav_home %}nav-active{% endblock %}
+
+{% block content %}
+
+<!-- ======================= HERO 영역 ======================= -->
+<section class="hero">
+    <div>
+        <h1 class="hero-main-title">
+            <span>zeroToAI</span> <br>
+            라즈베리파이 교재 & 부품 사이트
+        </h1>
+
+        <p class="hero-sub-title">
+            (여기에는 메인 소개 문구가 들어갈 예정입니다)
+        </p>
+
+        <div class="hero-actions">
+            <button class="btn btn-primary" onclick="location.href='/shop/books/'">
+                📘 교재 보기
+            </button>
+            <button class="btn btn-outline" onclick="location.href='/shop/parts/'">
+                🔧 부품 보기
+            </button>
+        </div>
+
+        <div class="hero-tags">
+            <span class="hero-tag">#라즈베리파이</span>
+            <span class="hero-tag">#교재</span>
+            <span class="hero-tag">#부품</span>
+        </div>
+    </div>
+
+    <div class="hero-image-box">
+        <div class="hero-image"></div> <!-- (썸네일 자리) -->
+    </div>
+</section>
+
+
+<!-- ======================= 게시판 요약 ======================= -->
+<section class="section">
+    <div class="section-header">
+        <div>
+            <div class="section-title">게시판 요약</div>
+            <div class="section-subtitle">(여기에 최근 게시글 3개가 표시될 예정입니다)</div>
+        </div>
+        <a href="/board/" class="section-more">더보기 →</a>
+    </div>
+
+    <div class="board-preview">
+        <div class="board-item">
+            <div class="board-title">(게시글 제목 자리)</div>
+            <div class="board-meta">(작성자 · 날짜 자리)</div>
+        </div>
+
+        <div class="board-item">
+            <div class="board-title">(게시글 제목 자리)</div>
+            <div class="board-meta">(작성자 · 날짜 자리)</div>
+        </div>
+
+        <div class="board-item">
+            <div class="board-title">(게시글 제목 자리)</div>
+            <div class="board-meta">(작성자 · 날짜 자리)</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================= 교재 미리보기 ======================= -->
+<section class="section">
+    <div class="section-header">
+        <div>
+            <div class="section-title">추천 교재</div>
+            <div class="section-subtitle">(여기에 교재 예시 카드 3개가 들어갈 예정입니다)</div>
+        </div>
+        <a href="/shop/books/" class="section-more">전체보기 →</a>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">(교재명 자리)</div>
+            <div class="card-meta">(간단한 설명 자리)</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">(교재명 자리)</div>
+            <div class="card-meta">(간단한 설명 자리)</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">(교재명 자리)</div>
+            <div class="card-meta">(간단한 설명 자리)</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================= 부품 미리보기 ======================= -->
+<section class="section">
+    <div class="section-header">
+        <div>
+            <div class="section-title">추천 부품</div>
+            <div class="section-subtitle">(여기에 부품 예시 카드 3개가 들어갈 예정입니다)</div>
+        </div>
+        <a href="/shop/parts/" class="section-more">전체보기 →</a>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">(부품명 자리)</div>
+            <div class="card-meta">(간단한 설명 자리)</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">(부품명 자리)</div>
+            <div class="card-meta">(간단한 설명 자리)</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">(부품명 자리)</div>
+            <div class="card-meta">(간단한 설명 자리)</div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

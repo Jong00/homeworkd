@@ -1,0 +1,61 @@
+{% extends "main/base.html" %}
+
+{% block title %}도서 목록{% endblock %}
+{% block nav_books %}nav-active{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <!-- 페이지 상단 제목 -->
+    <div class="section-header">
+        <div>
+            <div class="section-title">도서 목록</div>
+            <div class="section-subtitle">(여기에 도서 소개 문구가 들어갈 예정입니다)</div>
+        </div>
+    </div>
+
+    <!-- 필터/검색 영역 -->
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <button class="chip chip-active">전체</button>
+            <button class="chip">입문서</button>
+            <button class="chip">프로젝트</button>
+            <button class="chip">참고서</button>
+        </div>
+
+        <div class="toolbar-right">
+            <input type="text" class="search-input" placeholder="도서 검색 (자리)">
+            <select class="select-small">
+                <option>정렬 (자리)</option>
+            </select>
+        </div>
+    </div>
+
+    <p class="list-info">
+        ※ 여기에 데이터베이스에서 가져온 실제 도서 목록이 들어갈 예정입니다.
+    </p>
+
+    <!-- 도서 카드들 (자리 표시용) -->
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-title">(도서명 자리)</div>
+            <div class="card-meta">(여기에 도서 설명이 들어갈 예정입니다)</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">(도서명 자리)</div>
+            <div class="card-meta">(여기에 도서 설명이 들어갈 예정입니다)</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">(도서명 자리)</div>
+            <div class="card-meta">(여기에 도서 설명이 들어갈 예정입니다)</div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "main/base.html" %}
+
+{% block title %}게시판{% endblock %}
+{% block nav_board %}nav-active{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <!-- 상단 제목 / 설명 -->
+    <div class="section-header">
+        <div>
+            <div class="section-title">게시판</div>
+            <div class="section-subtitle">
+                (여기에 게시판 소개 문구가 들어갈 예정입니다)
+            </div>
+        </div>
+    </div>
+
+    <!-- 글쓰기 / 검색 툴바 -->
+    <div class="board-toolbar">
+        <button class="btn btn-write">글쓰기 (자리)</button>
+
+        <div style="display:flex; gap:6px;">
+            <input type="text" class="search-input" placeholder="검색어 입력 (자리)">
+            <button class="btn">검색</button>
+        </div>
+    </div>
+
+    <!-- 게시글 목록 박스 -->
+    <div class="board-list">
+
+        <!-- 헤더 라인 -->
+        <div class="board-header">
+            <div class="board-col-no">번호</div>
+            <div class="board-col-title">제목</div>
+            <div class="board-col-writer">작성자</div>
+            <div class="board-col-date">날짜</div>
+        </div>
+
+        <!-- 더미 row들 (자리 표시용) -->
+        <div class="board-row">
+            <div class="board-col-no">3</div>
+            <div class="board-row-title">(게시글 제목 자리)</div>
+            <div class="board-col-writer">(작성자)</div>
+            <div class="board-col-date">(날짜)</div>
+        </div>
+
+        <div class="board-row">
+            <div class="board-col-no">2</div>
+            <div class="board-row-title">(게시글 제목 자리)</div>
+            <div class="board-col-writer">(작성자)</div>
+            <div class="board-col-date">(날짜)</div>
+        </div>
+
+        <div class="board-row">
+            <div class="board-col-no">1</div>
+            <div class="board-row-title">(게시글 제목 자리)</div>
+            <div class="board-col-writer">(작성자)</div>
+            <div class="board-col-date">(날짜)</div>
+        </div>
+
+    </div>
+
+    <!-- 페이징 영역 (자리 표시용) -->
+    <div class="board-pagination">
+        <button class="page-btn">&lt;</button>
+        <button class="page-btn page-btn-active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">&gt;</button>
+    </div>
+
+    <p class="list-info">
+        ※ 나중에 데이터베이스와 연결하면, 위 목록과 페이징에 실제 게시글 데이터가 들어갈 예정입니다.
+    </p>
+
+</section>
+
+{% endblock %}

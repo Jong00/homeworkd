@@ -26,6 +26,7 @@
       /* 오버레이 */
       .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);display:none;z-index:1040}
       .overlay.active{display:block}
+
     </style>
   </head>
   <body>
@@ -160,7 +161,7 @@
       if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          window.location.href = 'login.html';
+          window.location.href = '/login/';
         });
       }
 

@@ -1,6 +1,9 @@
 # main/views.py
 from django.shortcuts import render
 
+def home(request):
+    return render(request, 'main/index/index.html')
+
 def index(request):
     # main/templates/main/index.html
     return render(request, "main/index/index.html")

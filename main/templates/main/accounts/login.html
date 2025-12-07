@@ -5,16 +5,33 @@
 
 {% block content %}
 
-<!-- login.css 불러오기 (head 말고 여기서 불러도 동작에는 문제 없음) -->
 <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
 
 <div class="login-page">
   <div class="login-box">
     <h2>로그인</h2>
 
-    <form id="loginForm">
-      <input type="email" class="login-input" placeholder="이메일 주소" required>
-      <input type="password" class="login-input" placeholder="비밀번호" required>
+    {# 로그인 실패 시 에러 메시지 표시 (LoginView가 form을 넘겨줌) #}
+    {% if form.errors %}
+      <p style="color:red;">아이디 또는 비밀번호가 올바르지 않습니다.</p>
+    {% endif %}
+
+    {# Django가 읽을 수 있는 진짜 폼으로 변경 #}
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+
+      {# LoginView는 기본적으로 username/password를 기대함 #}
+      <input type="text"
+             name="username"
+             class="login-input"
+             placeholder="아이디"
+             required>
+
+      <input type="password"
+             name="password"
+             class="login-input"
+             placeholder="비밀번호"
+             required>
 
       <div class="login-links">
         <a href="#">아이디 찾기</a> |
@@ -26,16 +43,5 @@
     </form>
   </div>
 </div>
-
-<script>
-  const loginForm = document.getElementById("loginForm");
-  loginForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-    // 로그인 상태 저장 (자리용)
-    localStorage.setItem("loggedIn", "true");
-    // 메인 페이지로 이동
-    window.location.href = "/";
-  });
-</script>
 
 {% endblock %}
